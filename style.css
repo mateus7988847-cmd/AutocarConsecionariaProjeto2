@@ -270,7 +270,7 @@ footer {
     /* Menu */
     #botoesCabecalho {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 10px;
     }
