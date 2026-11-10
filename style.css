@@ -69,7 +69,6 @@ img {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .marca1,
 .marca2,
 .marca3,
@@ -229,14 +228,42 @@ footer {
 .marcas a:hover {
     background-color: #8f1616;
 }
+/* RESPONSIVIDADE DO SITE */
+/* CARDS DE OFERTAS */
+.ofertas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card-oferta {
+    width: auto;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-oferta img {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: contain;
+}
+/* TABLETS E TELAS MÉDIAS */
+@media (max-width: 1000px) {
+   .ofertas {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-/* RESPONSIVIDADE PARA CELULARES E TABLETS */
+}
+/* TABLETS E CELULARES */
 @media (max-width: 768px) {
     /* Cabeçalho */
     .cabecalho {
         text-align: center;
     }
-
     .cabecalho h1 {
         font-size: 28px;
     }
@@ -247,22 +274,16 @@ footer {
         align-items: center;
         gap: 10px;
     }
-    #botoesCabecalho a {
-        font-size: 18px;
-    }
     /* Banner */
     #bannerPrincipal {
         width: 100%;
-        text-align: center;
         padding: 30px 10px;
         box-sizing: border-box;
     }
-
-    #bannerPrincipal p:first-child {
+ #bannerPrincipal p:first-child {
         font-size: 28px;
     }
-
-    #bannerPrincipal p:last-child {
+  #bannerPrincipal p:last-child {
         font-size: 16px;
     }
     /* Seções */
@@ -270,6 +291,7 @@ footer {
         width: 90%;
         margin: auto;
         text-align: center;
+        box-sizing: border-box;
     }
     h2 {
         font-size: 24px;
@@ -288,8 +310,6 @@ footer {
         width: 100%;
         max-width: 400px;
         height: auto;
-        display: block;
-        margin: auto;
     }
     /* Caixas dos carros */
     #hondacivic,
@@ -310,35 +330,25 @@ footer {
         width: 100%;
         max-width: 500px;
         margin: 20px auto;
-        text-align: left;
+        padding: 20px;
         box-sizing: border-box;
     }
     form input,
     form textarea {
         width: 100%;
-        padding: 12px;
         box-sizing: border-box;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    form textarea {
-        min-height: 120px;
-        resize: vertical;
     }
     form button {
         width: 100%;
-        padding: 12px;
-        font-size: 16px;
-        cursor: pointer;
+    }
+    /* Ofertas */
+    .ofertas {
+        grid-template-columns: repeat(2, 1fr);
     }
     /* Rodapé */
-    #footer {
+    footer {
         text-align: center;
         padding: 15px;
-    }
-    #footer p {
-        font-size: 14px;
     }
 }
 /* CELULARES PEQUENOS */
@@ -364,20 +374,15 @@ footer {
     p {
         font-size: 14px;
     }
-    #hondacivic,
-    #Corolla,
-    #Onix {
-        align-items: center;
+    /* Ofertas */
+    .ofertas {
+        grid-template-columns: 1fr;
+    }
+    .card-oferta {
+        width: 100%;
     }
     /* Formulário */
     form {
-        width: 100%;
-        padding: 0 5px;
-    }
-
-    form input,
-    form textarea,
-    form button {
-        font-size: 16px;
+        padding: 15px;
     }
 }
